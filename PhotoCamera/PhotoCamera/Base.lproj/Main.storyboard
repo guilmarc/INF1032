@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm3-LX-nBG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="CameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v7N-Mf-LHQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qls-6K-f3i">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="PhotoLibraryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Swk-rY-Y37"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xx2-Ac-sQG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xx2-Ac-sQG" firstAttribute="trailing" secondItem="Qls-6K-f3i" secondAttribute="trailing" id="3Ny-nE-Fvb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xx2-Ac-sQG" secondAttribute="bottom" constant="13" id="4U7-YG-arC"/>
+                            <constraint firstItem="cm3-LX-nBG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7kr-LX-mNn"/>
+                            <constraint firstItem="xx2-Ac-sQG" firstAttribute="top" secondItem="cm3-LX-nBG" secondAttribute="bottom" constant="8" symbolic="YES" id="MXo-lD-xzb"/>
+                            <constraint firstItem="cm3-LX-nBG" firstAttribute="leading" secondItem="xx2-Ac-sQG" secondAttribute="leading" id="ZXJ-Dn-9nj"/>
+                            <constraint firstItem="Qls-6K-f3i" firstAttribute="baseline" secondItem="cm3-LX-nBG" secondAttribute="baseline" id="cZO-01-l4m"/>
+                            <constraint firstItem="cm3-LX-nBG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="daG-cl-PUZ"/>
+                            <constraint firstItem="Qls-6K-f3i" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fWY-dC-wrX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cm3-LX-nBG"/>
+                                <exclude reference="Qls-6K-f3i"/>
+                                <exclude reference="xx2-Ac-sQG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7kr-LX-mNn"/>
+                                <exclude reference="ZXJ-Dn-9nj"/>
+                                <exclude reference="daG-cl-PUZ"/>
+                                <exclude reference="3Ny-nE-Fvb"/>
+                                <exclude reference="MXo-lD-xzb"/>
+                                <exclude reference="cZO-01-l4m"/>
+                                <exclude reference="fWY-dC-wrX"/>
+                                <exclude reference="4U7-YG-arC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cm3-LX-nBG"/>
+                                <include reference="Qls-6K-f3i"/>
+                                <include reference="xx2-Ac-sQG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7kr-LX-mNn"/>
+                                <include reference="ZXJ-Dn-9nj"/>
+                                <include reference="daG-cl-PUZ"/>
+                                <include reference="3Ny-nE-Fvb"/>
+                                <include reference="MXo-lD-xzb"/>
+                                <include reference="cZO-01-l4m"/>
+                                <include reference="fWY-dC-wrX"/>
+                                <include reference="4U7-YG-arC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="CameraButton" destination="cm3-LX-nBG" id="kiU-Je-WuH"/>
+                        <outlet property="ImageDislay" destination="xx2-Ac-sQG" id="IkL-B4-Wcf"/>
+                        <outlet property="PhotoLibraryButton" destination="Qls-6K-f3i" id="Vkn-7H-VC9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="418"/>
+        </scene>
+    </scenes>
+</document>
